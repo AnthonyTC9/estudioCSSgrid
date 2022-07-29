@@ -1,0 +1,36 @@
+/*Grillas crea un marco invisible donde vamos a poder organizar elementos*/
+.grid{
+    display:grid;
+   /* grid-template-columns: 200px 300px 400px;
+    grid-template-rows: auto 100px;
+    gap: 10px;*/
+   /* column-gap: 10px;*/
+   /* row-gap: 10px;*/
+   /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+   grid-template-columns: repeat(4,1fr); /*primero cuantas repeticiones y despues medida*/
+   gap:1em;
+   grid-template-rows: minmax(100px, auto);
+    
+}
+.nested-grid{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 100px;
+
+}
+.nested-grid > div{
+    border: 1px solid black;
+    background: yellow;
+    padding: 1em;
+}
+.grid > div{
+    background:#ecf0f1;
+    padding: 1em;
+    gap:1em;
+}
+
+
+
+.grid > div:hover{
+    border: 1px solid #f1c40f;
+}

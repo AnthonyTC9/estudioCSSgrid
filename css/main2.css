@@ -1,0 +1,39 @@
+/*Grillas crea un marco invisible donde vamos a poder organizar elementos*/
+.grid{
+    display:grid;
+    grid-template-columns: repeat(3,1fr); /*primero cuantas repeticiones y despues medida*/
+    gap:1em;
+    grid-auto-rows: minmax(100px, auto);
+    /*justify-items:stretch;*/
+    align-items: stretch;
+
+    
+}
+.element1 {
+    align-self: start;
+}
+.element2{
+    align-self: center;
+}
+.element3{
+    align-self: end;
+}
+.element4{
+    justify-self:start;
+}
+.element5{
+    justify-self:center;
+}
+.element6{
+    justify-self:end;
+}
+
+.grid > div{
+    background:#ecf0f1;
+    padding: 1em;
+    gap:1em;
+}
+
+.grid > div:hover{
+    border: 1px solid #f1c40f;
+}
